@@ -1,0 +1,487 @@
+@font-face {
+    font-family: "Gilroy-Bold";
+    src: local("Gilroy-Bold"),
+    url("../Font/gilroy-bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Gilroy-Regular";
+    src: local("Gilroy-Regular"),
+    url("../Font/gilroy-regular.ttf") format("truetype");
+}
+
+.bg__spawn--static_map {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #13131C;
+    background-image: url(../Item/Background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.light__kit--svg--2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ls--paleto--navigation__button {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 50px;
+}
+
+.los-santos__click__spawn--navigation--1 {
+    width: 350px;
+    height: 750px;
+    background: #FFFFFF;
+    border-radius: 35px;
+    z-index: 0;
+}
+
+.los-santos__click__spawn--navigation--1 {
+    width: 350px;
+    height: 750px;
+    border-radius: 35px;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+    filter: grayscale(1);
+    transition: filter 1.5s ease;
+}
+
+.los-santos__click__spawn--navigation--1:hover {
+    filter: grayscale(0);
+}
+
+.image__slide--los-santos {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.criminal--image-b {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 366.62px;
+    height: 513px;
+    filter: grayscale(1);
+    transition: transform 0.5s ease, filter 0.6s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.los-santos__click__spawn--navigation--1:hover .criminal--image-b {
+    transform: translate(-50%, -60px);
+    filter: grayscale(0);
+}
+
+.los-santos--wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 800px;
+    height: 100%;
+    animation: slide-back-forth 60s ease-in-out infinite;
+    animation-play-state: paused;
+    pointer-events: none;
+}
+
+.los-santos__click__spawn--navigation--1:hover .los-santos--wrapper {
+    animation-play-state: running;
+}
+
+.text--sls__anim {
+    position: absolute;
+    width: 424px;
+    left: calc(50% - 424px/2 + 200px);
+    top: 45px;
+}
+
+.text--sls__anim--active {
+    position: absolute;
+    width: 424px;
+    left: calc(50% - 424px/2 + 200px);
+    top: 45px;
+    animation: fadeIn 0.8s forwards;
+    opacity: 0;
+}
+
+.button__change--lossantos-1 {
+    position: absolute;
+    width: 250px;
+    height: 65px;
+    left: calc(50% - 250px/2);
+    bottom: 30px;
+    background: #999999;
+    border-radius: 10px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    overflow: hidden;
+    background-image: url(../Item/Filter.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Gilroy-Regular';
+}
+
+.button__change--lossantos-2--event {
+    position: absolute;
+    width: 250px;
+    height: 65px;
+    left: calc(50% - 250px/2);
+    bottom: 30px;
+    background: #BDFF69;
+    border-radius: 10px;
+    z-index: 2;
+    animation: buttonIn 1.5s forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease;
+    cursor: pointer;
+    font-family: 'Gilroy-Regular';
+}
+
+.button__change--lossantos-2--event::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../Item/Filter.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.button__change--lossantos-2--event:hover::before {
+    opacity: 0;
+}
+
+.button__change--lossantos-2--event:hover {
+    box-shadow: 0px 0px 100px -20px #BDFF69;
+}
+
+.text--los--santos__1 {
+    position: absolute;
+    left: calc(50% - 167px/2);
+    top: 30px;
+    font-family: 'Gilroy-Bold';
+    font-style: Bold;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 104.4%;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.svg--item--city__ls {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    left: calc(50% - 60px / 2);
+    top: 83px;
+    background: linear-gradient(180deg, rgba(153, 153, 153, 0.3) 0%, rgba(0, 0, 0, 0.075) 213.33%);
+    box-shadow: inset 0px -5px 15px rgba(189, 255, 105, 0.09);
+    border-radius: 10px;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+}
+
+.isolation--rgb--lossantos {
+    position: absolute;
+    width: 350px;
+    height: 143px;
+}
+
+.text--los--santos_general {
+    position: absolute;
+    left: 60px;
+    top: calc(50% - 175px/2 + 0.5px);
+}
+
+.text--los--santos_active {
+    opacity: 0;
+    animation: textIn 3s forwards;
+
+}
+
+.palma---1 {
+    position: absolute;
+    width: 350px;
+    left: 0px;
+    bottom: 0px;
+}
+
+.palma---2 {
+    position: absolute;
+    width: 350px;
+    right: 0px;
+    top: 0px;
+}
+
+.paleto-bay__click__spawn--navigation--2 {
+    width: 350px;
+    height: 750px;
+    background: #FFFFFF;
+    border-radius: 35px;
+    z-index: 5;
+}
+
+.paleto-bay__click__spawn--navigation--2 {
+    width: 350px;
+    height: 750px;
+    border-radius: 35px;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+    filter: grayscale(1);
+    transition: filter 1.5s ease;
+}
+
+.paleto-bay__click__spawn--navigation--2:hover {
+    filter: grayscale(0);
+}
+
+.paleto-bay__click__spawn--navigation--2:hover .criminal--image-b {
+    transform: translate(-50%, -60px);
+    filter: grayscale(0);
+}
+
+.paleto-bay__click__spawn--navigation--2:hover .paleto-bay--wrapper {
+    animation-play-state: running;
+}
+
+.paleto-bay--wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 800px;
+    height: 100%;
+    animation: slide-back-forth-2 60s ease-in-out infinite;
+    animation-play-state: paused;
+    pointer-events: none;
+}
+
+.los-santos__click__spawn--navigation--1:hover .paleto-bay--wrapper {
+    animation-play-state: running;
+}
+
+.image__slide--paleto-bay {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.button__change--paletobay-1 {
+    position: absolute;
+    width: 250px;
+    height: 65px;
+    left: calc(50% - 250px/2);
+    bottom: 30px;
+    background: #999999;
+    border-radius: 10px;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    overflow: hidden;
+    background-image: url(../Item/Filter.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Gilroy-Regular';
+}
+
+.button__change--paletobay-2--event {
+    position: absolute;
+    width: 250px;
+    height: 65px;
+    left: calc(50% - 250px/2);
+    bottom: 30px;
+    background: #BDFF69;
+    border-radius: 10px;
+    z-index: 7;
+    animation: buttonIn-2 1.5s forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease;
+    cursor: pointer;
+    font-family: 'Gilroy-Regular';
+}
+
+.button__change--paletobay-2--event::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../Item/Filter.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    z-index: 8;
+    pointer-events: none;
+}
+
+.button__change--paletobay-2--event:hover::before {
+    opacity: 0;
+}
+
+.button__change--paletobay-2--event:hover {
+    box-shadow: 0px 0px 100px -20px #BDFF69;
+}
+
+.text--paleto--bay__1 {
+    position: absolute;
+    left: calc(50% - 167px/2);
+    top: 30px;
+    font-family: 'Gilroy-Bold';
+    font-style: Bold;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 104.4%;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.text--sls__anim-2 {
+    position: absolute;
+    width: 424px;
+    right: calc(50% - 424px/2 + 200px);
+    top: 45px;
+}
+
+.text--sls__anim--active-2 {
+    position: absolute;
+    width: 424px;
+    right: calc(50% - 424px/2 + 200px);
+    top: 45px;
+    animation: fadeIn 0.8s forwards;
+    opacity: 0;
+}
+
+.text--paleto--bay_general {
+    position: absolute;
+    right: 60px;
+    top: calc(50% - 175px/2 + 0.5px);
+}
+
+.text--paleto--bay_active {
+    opacity: 0;
+    animation: textIn-2 3s forwards;
+}
+
+.isolation--rgb--paletobay {
+    position: absolute;
+    width: 350px;
+    height: 143px;
+    left: 400px;
+    z-index: 9;
+}
+
+.svg--item--bober__pb {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    left: calc(50% - 60px / 2);
+    top: 83px;
+    background: linear-gradient(180deg, rgba(153, 153, 153, 0.3) 0%, rgba(0, 0, 0, 0.075) 213.33%);
+    box-shadow: inset 0px -5px 15px rgba(189, 255, 105, 0.09);
+    border-radius: 10px;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes buttonIn-2 {
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes textIn-2 {
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes slide-back-forth-2 {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-450px);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes textIn {
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes buttonIn {
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes slide-back-forth {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-450px);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
